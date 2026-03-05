@@ -74,8 +74,13 @@ function renderGallery() {
 function scrollRow(scrollId, direction) {
     const container = document.getElementById(`scroll-${scrollId}`);
     if (container) {
-        const scrollAmount = container.clientWidth * 0.8;
-        container.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
+        const card = container.querySelector('.car-card');
+        const cardWidth = card ? card.offsetWidth + 15 : 300; // card + gap
+        
+        container.scrollBy({ 
+            left: cardWidth * direction, 
+            behavior: 'smooth' 
+        });
     }
 }
 
