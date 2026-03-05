@@ -26,7 +26,6 @@ function renderGallery(filter = 'all') {
             item.innerHTML = `
                 <a href="poze_galerie/full/Audi_A4_2020/${photo.name}" class="glightbox">
                     <img src="poze_galerie/thumbnail/Audi_A4_2020/${photo.name}" alt="${photo.alt}" loading="lazy">
-                    <div class="photo-overlay"><span>Vezi Detalii</span></div>
                 </a>
             `;
             galleryGrid.appendChild(item);
