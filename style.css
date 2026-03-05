@@ -71,6 +71,35 @@ nav a {
     transform: translateY(-5px);
 }
 
+.gallery-grid {
+    column-count: 3; /* 3 columns on desktop */
+    column-gap: 15px;
+    padding: 20px 0;
+}
+
+.gallery-item {
+    break-inside: avoid;
+    margin-bottom: 15px;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f4f4f4;
+}
+
+.gallery-item img {
+    width: 100%;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px) { .gallery-grid { column-count: 2; } }
+@media (max-width: 500px) { .gallery-grid { column-count: 1; } }
+
 /* PROCESS SECTION */
 .process-section {
     background-color: #2c2c2c;
