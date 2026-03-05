@@ -98,11 +98,19 @@ nav a {
     gap: 15px;
     overflow-x: auto !important;
     scroll-snap-type: x mandatory;
-    padding: 10px 40px; 
+    padding: 10px 0; 
     width: 100%;
     scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
     overscroll-behavior-x: contain; 
+    scroll-padding-left: 40px; 
+}
+
+.car-row-scroll::before,
+.car-row-scroll::after {
+    content: '';
+    flex: 0 0 40px;
+    display: block;
 }
 
 .car-row-scroll::-webkit-scrollbar {
@@ -116,10 +124,6 @@ nav a {
     scroll-snap-stop: always;
 }
 
-.car-card:last-child {
-    margin-right: 0;
-    padding-right: 0;
-}
 
 .car-card img {
     width: 100%;
@@ -215,17 +219,14 @@ footer {
     padding: 2rem 0;
 }
 
-/* RESPONSIVE DESIGN */
-@media (max-width: 850px) {
-    .hero-grid {
-        grid-template-columns: 1fr; /* Stacks to 1 column on tablets/phones */
+@media (max-width: 768px) {
+    .car-row-scroll {
+        padding: 10px 0;
+        scroll-padding-left: 35px;
     }
-    .hero-img {
-        height: 400px;
-    }
-    .product {
-        flex-direction: column;
-        text-align: center;
+    .car-row-scroll::before,
+    .car-row-scroll::after {
+        flex: 0 0 35px;
     }
 }
 
