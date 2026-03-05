@@ -12,6 +12,11 @@ const photos = [
     { name: 'IMG_8128.webp', folder: 'poze_galerie/full/Dacia_Sandero_Stepway', category: 'Dacia Sandero Stepway', alt: 'Dacia Sandero Stepway 3' },
     { name: 'IMG_8132.webp', folder: 'poze_galerie/full/Dacia_Sandero_Stepway', category: 'Dacia Sandero Stepway', alt: 'Dacia Sandero Stepway 4' },
     { name: 'IMG_8133.webp', folder: 'poze_galerie/full/Dacia_Sandero_Stepway', category: 'Dacia Sandero Stepway', alt: 'Dacia Sandero Stepway 5' },
+    { name: 'IMG_9911.webp', folder: 'poze_galerie/full/Renault_Captur_2020', category: 'Renault Captur 2020', alt: 'Renault Captur 1' },
+    { name: 'IMG_9912.webp', folder: 'poze_galerie/full/Renault_Captur_2020', category: 'Renault Captur 2020', alt: 'Renault Captur 2' },
+    { name: 'IMG_9913.webp', folder: 'poze_galerie/full/Renault_Captur_2020', category: 'Renault Captur 2020', alt: 'Renault Captur 3' },
+    { name: 'IMG_9914.webp', folder: 'poze_galerie/full/Renault_Captur_2020', category: 'Renault Captur 2020', alt: 'Renault Captur 4' },
+    { name: 'IMG_9916.webp', folder: 'poze_galerie/full/Renault_Captur_2020', category: 'Renault Captur 2020', alt: 'Renault Captur 5' },
 ];
 
 const lightbox = GLightbox({ 
