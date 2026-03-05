@@ -1,7 +1,17 @@
 const photos = [
-    { name: 'IMG_0523.webp', folder: 'poze_galerie/full/Audi_A4_2020', category: 'Audi A4 2020', alt: 'Huse Audi A4 Piele' },
-    { name: 'IMG_0519.webp', folder: 'poze_galerie/full/Audi_A4_2020', category: 'Renault Master', alt: 'Huse Renault Master' },
-    { name: 'IMG_0522.webp', folder: 'poze_galerie/full/Audi_A4_2020', category: 'Detalii Design', alt: 'Detaliu cusătură dublă' },
+    { name: 'IMG_0523.webp', folder: 'poze_galerie/full/Audi_A4_2020', category: 'Audi A4 2020', alt: 'Huse Audi A4 Piele 1' },
+    { name: 'IMG_0519.webp', folder: 'poze_galerie/full/Audi_A4_2020', category: 'Audi A4 2020', alt: 'Huse Audi A4 Piele 2' },
+    { name: 'IMG_0522.webp', folder: 'poze_galerie/full/Audi_A4_2020', category: 'Audi A4 2020', alt: 'Huse Audi A4 Piele 3' },
+    { name: 'IMG_0138.webp', folder: 'poze_galerie/full/Dacia_Sandero_Logan_2020', category: 'Dacia Sandero Logan 2020', alt: 'Dacia Sandero Logan 2020 1' },
+    { name: 'IMG_9653.webp', folder: 'poze_galerie/full/Dacia_Sandero_Logan_2020', category: 'Dacia Sandero Logan 2020', alt: 'Dacia Sandero Logan 2020 2' },
+    { name: 'IMG_9655.webp', folder: 'poze_galerie/full/Dacia_Sandero_Logan_2020', category: 'Dacia Sandero Logan 2020', alt: 'Dacia Sandero Logan 2020 3' },
+    { name: 'IMG_9656.webp', folder: 'poze_galerie/full/Dacia_Sandero_Logan_2020', category: 'Dacia Sandero Logan 2020', alt: 'Dacia Sandero Logan 2020 4' },
+    { name: 'IMG_9657.webp', folder: 'poze_galerie/full/Dacia_Sandero_Logan_2020', category: 'Dacia Sandero Logan 2020', alt: 'Dacia Sandero Logan 2020 5' },
+    { name: 'IMG_8126.webp', folder: 'poze_galerie/full/Dacia_Sandero_Stepway', category: 'Dacia Sandero Stepway', alt: 'Dacia Sandero Stepway 1' },
+    { name: 'IMG_8127.webp', folder: 'poze_galerie/full/Dacia_Sandero_Stepway', category: 'Dacia Sandero Stepway', alt: 'Dacia Sandero Stepway 2' },
+    { name: 'IMG_8128.webp', folder: 'poze_galerie/full/Dacia_Sandero_Stepway', category: 'Dacia Sandero Stepway', alt: 'Dacia Sandero Stepway 3' },
+    { name: 'IMG_8132.webp', folder: 'poze_galerie/full/Dacia_Sandero_Stepway', category: 'Dacia Sandero Stepway', alt: 'Dacia Sandero Stepway 4' },
+    { name: 'IMG_8133.webp', folder: 'poze_galerie/full/Dacia_Sandero_Stepway', category: 'Dacia Sandero Stepway', alt: 'Dacia Sandero Stepway 5' },
 ];
 
 const lightbox = GLightbox({ 
