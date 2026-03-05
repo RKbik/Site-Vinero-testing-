@@ -24,8 +24,8 @@ function renderGallery(filter = 'all') {
             item.className = `gallery-item ${photo.category}`;
             
             item.innerHTML = `
-                <a href="poze_site_vinero_full_1/Audi A4 2020/${photo.name}" class="glightbox">
-                    <img src="poze_site_vinero_thumbnail/${photo.name}" alt="${photo.alt}" loading="lazy">
+                <a href="poze_galerie/full/Audi_A4_2020/${photo.name}" class="glightbox">
+                    <img src="poze_galerie/thumbnail/Audi_A4_2020/${photo.name}" alt="${photo.alt}" loading="lazy">
                     <div class="photo-overlay"><span>Vezi Detalii</span></div>
                 </a>
             `;
