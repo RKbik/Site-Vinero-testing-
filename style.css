@@ -111,8 +111,9 @@ nav a {
 
 .car-row-container {
     position: relative;
+    display: flex;
+    align-items: center;
     width: 100%;
-    overflow: hidden;
 }
 
 .car-row-scroll {
@@ -145,24 +146,47 @@ nav a {
     object-fit: cover;
 }
 
-/* Nav Buttons */
 .nav-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0,0,0,0.5);
-    color: white;
+    background: rgba(0, 0, 0, 0.6); /* Dark semi-transparent circle */
+    color: #ffffff;
     border: none;
-    padding: 15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Makes it a circle */
     cursor: pointer;
-    z-index: 10;
+    z-index: 5; /* Keeps it above the images */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    transition: all 0.3s ease;
 }
-.prev { left: -40px; }
-.next { right: -40px; }
+
+.nav-btn:hover {
+    background: #d32f2f;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
 
 /* Mobile Responsive */
 @media (max-width: 900px) { .gallery-grid { column-count: 2; } }
 @media (max-width: 500px) { .gallery-grid { column-count: 1; } }
+@media (max-width: 600px) {
+    .nav-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
+    }
+}
 
 /* PROCESS SECTION */
 .process-section {
