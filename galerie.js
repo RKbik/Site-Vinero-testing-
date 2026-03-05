@@ -41,7 +41,7 @@ function renderGallery() {
             item.className = 'car-card';
             item.innerHTML = `
                 <a href="${photo.folder}/${photo.name}" class="glightbox">
-                    <img src="poze_galerie/thumbnail/Audi_A4_2020/${photo.name}" alt="${photo.alt}" loading="lazy">
+                    <img src="poze_galerie/thumbnail/${photo.name}" alt="${photo.alt}" loading="lazy">
                 </a>
             `;
             scrollContainer.appendChild(item);
