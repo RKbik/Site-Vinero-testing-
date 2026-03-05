@@ -1,50 +1,48 @@
-const photos = [
-    { name: 'IMG_0519.webp', category: 'utilitare', alt: 'Huse Renault Master' },
-    { name: 'IMG_0522.webp', category: 'detalii', alt: 'Detaliu cusătură dublă' },
-    { name: 'IMG_0523.webp', category: 'detalii', alt: 'Detaliu cusătură dublă' },
-];
-
-const lightbox = GLightbox({ 
-    selector: '.glightbox',
-    touchNavigation: true,
-    loop: true
-});
-
-const galleryGrid = document.getElementById('vinero-gallery');
-
-function renderGallery(filter = 'all') {
+function renderGallery() {
     const galleryGrid = document.getElementById('vinero-gallery');
-    if (!galleryGrid) return; // Safety check
-    
-    galleryGrid.innerHTML = ''; // Clear current view
+    galleryGrid.innerHTML = ''; 
 
-    photos.forEach(photo => {
-        if (filter === 'all' || photo.category === filter) {
+    // 1. Get unique categories/folders
+    const categories = [...new Set(photos.map(p => p.category))];
+
+    categories.forEach(cat => {
+        // 2. Create a Section for this car
+        const section = document.createElement('section');
+        section.className = 'car-row-section';
+        
+        section.innerHTML = `
+            <h2 class="car-row-title">${cat.replace(/-/g, ' ').toUpperCase()}</h2>
+            <div class="car-row-container">
+                <div class="car-row-scroll" id="scroll-${cat}">
+                    </div>
+                <button class="nav-btn next" onclick="scrollRow('${cat}', 1)">&#10095;</button>
+                <button class="nav-btn prev" onclick="scrollRow('${cat}', -1)">&#10094;</button>
+            </div>
+        `;
+
+        const scrollContainer = section.querySelector('.car-row-scroll');
+
+        // 3. Fill the row with photos
+        photos.filter(p => p.category === cat).forEach(photo => {
             const item = document.createElement('div');
-            item.className = `gallery-item ${photo.category}`;
-            
+            item.className = 'car-card';
             item.innerHTML = `
-                <a href="poze_galerie/full/Audi_A4_2020/${photo.name}" class="glightbox">
-                    <img src="poze_galerie/thumbnail/Audi_A4_2020/${photo.name}" alt="${photo.alt}" loading="lazy">
+                <a href="${photo.folder}/${photo.name}" class="glightbox">
+                    <img src="poze_site_vinero_thumbnail/${photo.name}" alt="${photo.alt}">
                 </a>
             `;
-            galleryGrid.appendChild(item);
-        }
+            scrollContainer.appendChild(item);
+        });
+
+        galleryGrid.appendChild(section);
     });
-    
+
     lightbox.reload();
 }
 
-function filterSelection(category) {
-    renderGallery(category);
-    const buttons = document.querySelectorAll('.filter-btn');
-    // Remove 'active' from all
-    buttons.forEach(btn => btn.classList.remove('active'));
-    // Add 'active' to the one that was clicked
-    // This assumes your HTML buttons look like: onclick="filterSelection('premium', this)"
+// 4. Scroll Logic
+function scrollRow(cat, direction) {
+    const container = document.getElementById(`scroll-${cat}`);
+    const scrollAmount = container.clientWidth * 0.8;
+    container.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
 }
-
-// Initial Load
-document.addEventListener('DOMContentLoaded', () => {
-    renderGallery();
-});
