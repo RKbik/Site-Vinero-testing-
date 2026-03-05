@@ -78,18 +78,18 @@ nav a {
 }
 
 .gallery-item {
-    break-inside: avoid;
-    margin-bottom: 15px;
-    position: relative;
-    border-radius: 8px;
-    overflow: hidden;
-    background: #f4f4f4;
+    background: #fcfcfc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .gallery-item img {
-    width: 100%;
+    width: auto;         
+    max-width: 100%;    
+    margin: 0 auto;      
     display: block;
-    transition: transform 0.5s ease;
+    height: auto;
 }
 
 .gallery-item:hover img {
