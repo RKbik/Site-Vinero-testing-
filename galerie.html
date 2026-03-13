@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galerie Foto - Huse Auto Vinero Timișoara</title>
@@ -9,19 +10,24 @@
 <body>
     <nav>
         <a href="index.html">Acasă</a>
-        <a href="galerie.html" class="active">Galerie</a>
+        <a href="index.html#about">Despre noi</a>
         <a href="index.html#contact">Contact</a>
+        <a href="galerie.html" class="active">Galerie</a>
     </nav>
 
+    <header class="gallery-intro">
     <div class="container">
-        <h1>Portofoliu Lucrări Vinero</h1>
-        <p>Explorează peste 100 de modele de huse auto create în atelierul nostru din Timișoara.</p>
-        
-        <div class="photo-grid">
-            <div class="photo-item">
-                <img src="images/huse-bmw-seria3.webp" alt="Huse auto BMW Seria 3 piele neagră" loading="lazy">
-            </div>
-            </div>
+        <h1>Galerie Foto Vinero</h1>
+        <p class="subtitle">"Standarde de reprezentanță în fiecare cusătură. Explorați galeria noastră de proiecte personalizate."</p>
     </div>
+</header>
+
+    <div class="gallery-container">
+        <div id="vinero-gallery"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+
+    <script src="galerie.js"></script>
 </body>
 </html>

@@ -1,9 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
   <url>
-    <loc>https://huseautotm.ro/</loc>
-    <lastmod>2026-02-17</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://vinero.ro/</loc>
+    <lastmod>2026-03-13</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    
+    <image:image>
+      <image:loc>https://vinero.ro/Hero/poza1.jpeg</image:loc>
+      <image:caption>Tapițerie și huse auto pentru vehicule speciale și ambulanțe Timiș</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://vinero.ro/Hero/poza2.jpeg</image:loc>
+      <image:caption>Huse auto material textil texturat montaj profesional Vinero</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://vinero.ro/Hero/poza3.jpeg</image:loc>
+      <image:caption>Huse auto personalizate cu inserții portocalii Timișoara</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://vinero.ro/Hero/poza4.jpeg</image:loc>
+      <image:caption>Huse scaune auto sport roșu și gri</image:caption>
+    </image:image>
   </url>
+
+  <url>
+    <loc>https://vinero.ro/galerie.html</loc>
+    <lastmod>2026-03-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
