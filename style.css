@@ -218,6 +218,12 @@ nav a {
     }
 }
 
+@media screen and (max-width: 480px) {
+    .mobile-hide {
+        display: none;
+    }
+}
+
 iframe {
     max-width: 100%;
     border: none;
